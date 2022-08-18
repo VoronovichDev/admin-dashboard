@@ -89,10 +89,86 @@ th {
    grid-template-rows: 1fr 5fr;
 }
 
+/*Sidebar*/
+
 .sidebar {
+   padding: 2vh 0 0 2vh;
+   color: rgb(255, 255, 255);
    grid-row: 1/-1;
-   background-color: aquamarine;
+   background-color: #1992d4;
+   display: grid;
+   grid-template-rows: repeat(3, min-content);
+   gap: 8vh;
+   align-items: baseline;
 }
+
+/*Sidebar header*/
+.sidebar__header {
+   height: min-content;
+   display: flex;
+   align-items: center;
+   gap: 1vw;
+   cursor: pointer;
+}
+
+.sidebar__header img {
+   width: 2.5rem;
+}
+
+.sidebar__header h1 {
+   font-weight: 500;
+   font-size: 24px;
+}
+
+/*Sidebar main*/
+.sidebar__main {
+   display: grid;
+   align-items: center;
+   height: min-content;
+   gap: 2vh;
+}
+
+.sidebar__main .main__btn {
+   display: flex;
+   align-items: center;
+   height: min-content;
+   gap: 1vw;
+}
+
+.sidebar__main .main__btn a {
+   font-weight: 500;
+   font-size: 16px;
+}
+
+.sidebar__main img {
+   width: 1rem;
+}
+
+/*Sidebar secondary*/
+.sidebar__secondary {
+   display: grid;
+   align-items: center;
+   height: min-content;
+   gap: 2vh;
+}
+
+.sidebar__secondary .secondary__btn {
+   display: flex;
+   align-items: center;
+   height: min-content;
+   gap: 1vw;
+}
+
+.sidebar__secondary .secondary__btn a {
+   font-weight: 500;
+   font-size: 16px;
+}
+
+.sidebar__secondary img {
+   width: 1rem;
+}
+
+/*Header*/
 .header {
    background-color: rgb(167, 255, 84);
 }
