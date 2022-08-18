@@ -108,16 +108,17 @@ th {
    display: flex;
    align-items: center;
    gap: 1vw;
-   cursor: pointer;
 }
 
 .sidebar__header img {
    width: 2.5rem;
+   cursor: pointer;
 }
 
 .sidebar__header h1 {
    font-weight: 500;
    font-size: 24px;
+   cursor: pointer;
 }
 
 /*Sidebar main*/
@@ -135,13 +136,15 @@ th {
    gap: 1vw;
 }
 
-.sidebar__main .main__btn a {
+.sidebar__main .main__btn div {
    font-weight: 500;
    font-size: 16px;
+   cursor: pointer;
 }
 
 .sidebar__main img {
    width: 1rem;
+   cursor: pointer;
 }
 
 /*Sidebar secondary*/
@@ -159,7 +162,7 @@ th {
    gap: 1vw;
 }
 
-.sidebar__secondary .secondary__btn a {
+.sidebar__secondary .secondary__btn div {
    font-weight: 500;
    font-size: 16px;
 }
@@ -170,8 +173,27 @@ th {
 
 /*Header*/
 .header {
-   background-color: rgb(167, 255, 84);
+   background-color: #ffffff;
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   grid-template-rows: 1fr 2fr;
 }
+
+.header__search {
+   background-color: rgb(38, 146, 79);
+}
+.header__info {
+   background-color: aqua;
+}
+.header__status {
+   background-color: rgb(255, 92, 92);
+}
+.header__buttons {
+   border-color: antiquewhite;
+}
+
+/*Main*/
+
 .main-content {
    background-color: rgb(247, 173, 36);
 }
