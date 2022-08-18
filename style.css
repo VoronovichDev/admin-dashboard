@@ -108,11 +108,13 @@ th {
    display: flex;
    align-items: center;
    gap: 1vw;
+   margin: 0 25px 0 0;
 }
 
 .sidebar__header img {
    width: 2.5rem;
    cursor: pointer;
+   min-width: 45px;
 }
 
 .sidebar__header h1 {
@@ -134,6 +136,7 @@ th {
    align-items: center;
    height: min-content;
    gap: 1vw;
+   margin: 0 0 0 1.5rem;
 }
 
 .sidebar__main .main__btn div {
@@ -153,6 +156,7 @@ th {
    align-items: center;
    height: min-content;
    gap: 2vh;
+   margin: 0 0 0 1.5rem;
 }
 
 .sidebar__secondary .secondary__btn {
@@ -180,7 +184,7 @@ th {
    grid-template-columns: 2fr 1fr;
    grid-template-rows: auto auto;
    gap: 25px;
-   padding: 15px;
+   padding: 15px 30px;
 }
 
 /*header search*/
@@ -203,6 +207,7 @@ th {
 
 .header__search img {
    width: 2vw;
+   cursor: pointer;
 }
 
 /*header info*/
@@ -214,10 +219,12 @@ th {
    justify-self: end;
    font-weight: 700;
    gap: 15px;
+   cursor: pointer;
 }
 
 .bell__img {
    width: 2vw;
+   cursor: pointer;
 }
 
 .info__photo {
@@ -235,6 +242,7 @@ th {
 
 .header__status img {
    grid-row: 1/-1;
+   cursor: pointer;
 }
 
 .status__hi {
@@ -247,6 +255,7 @@ th {
    align-self: start;
    font-weight: 700;
    font-size: 1.3rem;
+   cursor: pointer;
 }
 
 .header__buttons {
@@ -262,8 +271,18 @@ th {
    color: white;
    border: none;
    background-color: #1992d4;
+   transition: background-color 0.5s ease, transform 0.2s ease;
    border-radius: 4vw;
    font-weight: 700;
+   cursor: pointer;
+}
+
+.header__buttons button:hover {
+   background-color: #11618c;
+}
+
+.header__buttons button:active {
+   transform: scale(0.95);
 }
 
 /*Main*/
@@ -273,19 +292,88 @@ th {
    display: grid;
    grid-template-columns: 5fr 2fr;
    grid-template-rows: 1fr 1fr;
+   gap: 15px;
+   padding: 40px 15px;
 }
+
+/*Main projects*/
 .main__projects {
    grid-row: 1 / span 2;
    grid-column: 1;
-   background-color: rgb(255, 147, 147);
 }
+
+.projects__cards {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   grid-template-rows: repeat(3, 1fr);
+   gap: 15px;
+}
+
+.projects__text {
+   font-weight: 700;
+   font-size: 1.4rem;
+   margin: 0 0 2vh 0;
+   cursor: pointer;
+}
+
+.card {
+   display: grid;
+   grid-template-rows: 4vh auto 3vh;
+   background-color: #ffffff;
+   border-radius: 10px;
+   border-left: 9px #f0b429 solid;
+   box-shadow: 0px 5px 5px rgb(192, 192, 192);
+   padding: 20px 10px;
+}
+
+.card__title {
+   font-weight: 700;
+   cursor: pointer;
+}
+.card__text {
+   color: #838383;
+}
+.card__icons {
+   display: flex;
+   gap: 25px;
+   justify-content: end;
+}
+.icon__card {
+   cursor: pointer;
+   width: 1.5vw;
+   height: 1.5vw;
+   min-width: 20px;
+   min-height: 20px;
+}
+
+/*Main announcements*/
 .main__announcements {
    grid-row: 1;
    grid-column: 2;
-   background-color: rgb(122, 255, 122);
 }
+
+.announcements__card {
+   background-color: #ffffff;
+}
+
+.announcements__text {
+   font-weight: 700;
+   font-size: 1.4rem;
+   margin: 0 0 2vh 0;
+   cursor: pointer;
+}
+/*Main trending*/
 .main__trending {
    grid-row: 2;
    grid-column: 2;
-   background-color: rgb(154, 154, 255);
+}
+
+.trending__card {
+   background-color: #ffffff;
+}
+
+.trending__text {
+   font-weight: 700;
+   font-size: 1.4rem;
+   cursor: pointer;
 }
