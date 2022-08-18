@@ -270,4 +270,22 @@ th {
 
 .main-content {
    background-color: #e2e8f0;
+   display: grid;
+   grid-template-columns: 5fr 2fr;
+   grid-template-rows: 1fr 1fr;
+}
+.main__projects {
+   grid-row: 1 / span 2;
+   grid-column: 1;
+   background-color: rgb(255, 147, 147);
+}
+.main__announcements {
+   grid-row: 1;
+   grid-column: 2;
+   background-color: rgb(122, 255, 122);
+}
+.main__trending {
+   grid-row: 2;
+   grid-column: 2;
+   background-color: rgb(154, 154, 255);
 }
